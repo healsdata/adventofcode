@@ -22,4 +22,5 @@ function inputGenerator($lines)
     foreach ($lines as $line) {
         yield trim($line);
     }
+
 }
