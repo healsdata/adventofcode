@@ -7,8 +7,7 @@ import (
 	"strings"
 )
 
-func Day2(scanner *bufio.Scanner, r int, g int, b int) int {
-
+func Day2Part1(scanner *bufio.Scanner, r int, g int, b int) int {
 	total := 0
 
 	for scanner.Scan() {
@@ -23,6 +22,21 @@ func Day2(scanner *bufio.Scanner, r int, g int, b int) int {
 			Check(err)
 			total += i
 		}
+
+	}
+
+	return total
+}
+
+func Day2Part2(scanner *bufio.Scanner) int {
+	total := 0
+
+	for scanner.Scan() {
+		game := scanner.Text()
+
+		gr, gg, gb := getMaxColorsFromGame(game)
+
+		total += gr * gg * gb
 
 	}
 
