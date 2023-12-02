@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func check(e error) {
+func Check(e error) {
 	if e != nil {
 		panic(e)
 	}
@@ -20,7 +20,7 @@ func reverse(s string) string {
 	return string(r)
 }
 
-func fileScanner(fn string) (*bufio.Scanner, error) {
+func FileScanner(fn string) (*bufio.Scanner, error) {
 	f, err := os.Open(fn)
 	if err != nil {
 		return nil, err

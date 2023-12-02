@@ -10,8 +10,8 @@ func Day1() {
 	total := 0
 
 	// scanner := stringScanner(`two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen`)
-	scanner, err := fileScanner("adventofcode/day1-input.txt")
-	check(err)
+	scanner, err := FileScanner("adventofcode/day1-input.txt")
+	Check(err)
 
 	for scanner.Scan() {
 		text := scanner.Text()
@@ -19,7 +19,7 @@ func Day1() {
 		first, last := findFirstAndLastNumber(text)
 
 		line, atoiErr := strconv.Atoi(first + last)
-		check(atoiErr)
+		Check(atoiErr)
 
 		total += line
 	}
