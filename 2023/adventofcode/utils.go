@@ -3,6 +3,7 @@ package adventofcode
 import (
 	"bufio"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -30,4 +31,17 @@ func FileScanner(fn string) (*bufio.Scanner, error) {
 
 func stringScanner(s string) (*bufio.Scanner, error) {
 	return bufio.NewScanner(strings.NewReader(s)), nil
+}
+
+func isInt(s string) bool {
+	if s == "" {
+		return false
+	}
+
+	_, err := strconv.Atoi(s)
+	if err != nil {
+		return false
+	}
+
+	return true
 }
