@@ -25,6 +25,11 @@ func Day3Part1(scanner *bufio.Scanner) int {
 	return total
 }
 
+func Day3Part2(scanner *bufio.Scanner) int {
+
+	return 0
+}
+
 func findSymbolAdjacentNumbersInThisLine(lastLine string, thisLine string, nextLine string) int {
 	if thisLine == "" {
 		return 0

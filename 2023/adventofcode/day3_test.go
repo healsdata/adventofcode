@@ -25,6 +25,23 @@ func TestDay3(t *testing.T) {
 
 		assert.Equal(t, 4361, Day3Part1(scanner))
 	})
+	t.Run("acceptance2", func(t *testing.T) {
+		ex := `467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..`
+
+		scanner, err := stringScanner(ex)
+		require.NoError(t, err)
+
+		assert.Equal(t, 467835, Day3Part2(scanner))
+	})
 }
 
 func TestDay3findSymbolAdjacentNumbersInThisLine(t *testing.T) {
