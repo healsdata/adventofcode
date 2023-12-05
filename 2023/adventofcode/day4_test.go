@@ -20,7 +20,8 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11`
 		scanner, err := stringScanner(ex)
 		require.NoError(t, err)
 
-		assert.Equal(t, 13, Day4Part1(scanner))
+		//assert.Equal(t, 13, Day4Part1(scanner))
+		assert.Equal(t, 30, Day4Part2(scanner))
 	})
 
 }
